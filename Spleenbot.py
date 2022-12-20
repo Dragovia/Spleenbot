@@ -20,7 +20,26 @@ async def on_message(message):
     if message.author == bot.user: #to not respond to bots
         return
     if "hello" in message.content:
-        await message.channel.send("Hi!") #response
+        responses = [f"hugs{message.author.mention}",'Yo wassup!', 'Howdy!', 'Hola :P',
+                     'Heeeyyyyy',
+                     'salutations',
+                     'oh hey? Whats good?',
+                     'haiii',
+                     'Hello!',
+                     'AYO!',
+                     'and hello back to you! <3',
+                     'bonjour',
+                     'guten tag',
+                     'gluten tag, oops I mean guten tag!',
+                     'nin hao!',
+                     'konichiwa friend',
+                     'anyoung haseyo',
+                     'weeeeeeeeeeeeee',
+                     'hey stinky breath',
+                     'Welcome to Costco, I love you.',
+                     'lol sup','oh I did not see you there,how you doinnnn~','WAZZZZZAP','uh hey I guess..',
+                      'erm hey','Beep blerp boop H e l l o beep','ayo with the mayo whatssss poppin?!']
+        await message.channel.send(random.choice(responses)) #response
     if "rickroll" in message.content:
         await message.channel.send("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
     if "princesa" in message.content:
@@ -81,4 +100,4 @@ async def rando(ctx):
     await ctx.send(f"numbers are {x} and {random_value} ")
   
 
-bot.run('') #put your token here 
+bot.run('') #put your token here
